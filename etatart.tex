@@ -1,0 +1,88 @@
+Critères le plus trivial de la mesure de la qualité de classification.
+Il consiste a rapporter l'ensemble des observations mal classées par
+rapport à la totalité des observations classées. Il peut être calculé à
+partir du taux global de bonnes classifications (\(T_{gbc}\)).
+
+\(T_{gec} = 1 - T_{gbc}\)
+
+avec
+
+\(T_{gbc} = \frac{1} {n}\sum_{i=1}^k n_{i,i}\)
+
+ou
+
+\(T_{gec} = \frac{1} {n}\sum_{i,j=1}^k n_{i,j}\)\texttt{~avec~}\(i \neq j\)
+
+Cet indice reste pertinent, tant que les classes sont équilibrées en
+termes de taille et de répartition. Cependant, il est à éviter quand
+nous avons à faire à des classes de tailles très variées. En effet, si
+notre set de données est constitué deux deux classes, l'une de taille
+petite et l'autre bien plus grande, un modèle qui classerait l'ensemble
+dans la deuxième, aura un taux d'erreur faussement bas. Pour remedier à
+ce biais, La modération du poids des grosses classe
+
+\begin{itemize}
+\tightlist
+\item
+  taux d'erreur dans la classification (peu pertinent dans certains
+  cas). cet indice est peux efficace quand il s'agit de qualifier une
+  classification avec des classe déséquilibrées...et peut donner une
+  évaluation éronné de la qualité du classifieur dans le cas ou on a un
+  jeu de données avec des classes très petite et des classes très
+  grandes.
+\end{itemize}
+
+\emph{Cette anomalie est liée au fait que nous voulons absolument que le
+modèle réalise un affectation (positif ou négatif). Or dans de nombreux
+domaines, ce qui nous intéresse avant tout, c'est de mesurer la
+propension à être positif ou négatif !}(propension=tendance à)
+
+\subsection{le taux d'erreur avec
+coût}\label{le-taux-derreur-avec-couxfbt}
+
+Afin de palierà cette faille, il a été introduit aurailes classe sont de
+tailles très différentes (ce qui est souvent le cas). En effet, cet
+indice donnerait un taux d'erreur très basfaible quand il s'agit de
+trouver des petites classes rappel précision f-mesure intéressant car
+ils permettent un ajustement du modèle (plus de rappel pour ou alors
+plus de précision pour)
+
+Rappel result+/total+ {[}TP/(TP+FN){]} plus le rappel est proche de 1
+plus le nombre de Positif trouvé Précision result+/totalc
+{[}TP/(TP+FP){]} si on veut éviter le FP F-mesure moyenne harmonique de
+Rappel et précision
+
+\subsection{Matrice de confusion}\label{matrice-de-confusion}
+
+\subsection{Courbes ROC}\label{courbes-roc}
+
+\subsection{Aire sous courbes ROC
+AUC}\label{aire-sous-courbes-roc-auc}
+
+\subsection{précision rappel}\label{pruxe9cision-rappel}
+
+=
+
+\subsection{F-mesure}\label{f-mesure}
+
+\section{Indices Internes}\label{indices-internes}
+
+\subsection{indice de Dunn (1974)}\label{indice-de-dunn-1974}
+
+\subsection{indice BH de Baker et Hubert
+(1975)}\label{indice-bh-de-baker-et-hubert-1975}
+
+\subsection{indice DB de Davies et Bouldin
+(1979)}\label{indice-db-de-davies-et-bouldin-1979}
+
+\subsection{indice CH de Calinsky et Harabsz
+(1974)}\label{indice-ch-de-calinsky-et-harabsz-1974}
+
+\subsection{indice Silhouette (S) de Rousseeuw
+(1987)}\label{indice-silhouette-s-de-rousseeuw-1987}
+
+\subsection{indice HL de Hubert et Levin
+(1976)}\label{indice-hl-de-hubert-et-levin-1976}
+
+\subsection{indice KL de Krzanowski et Lai
+(1988)}\label{indice-kl-de-krzanowski-et-lai-1988}

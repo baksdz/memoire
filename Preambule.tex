@@ -1,0 +1,123 @@
+% L'ordre compte
+
+% Têtes de chapitre sans numéro de page
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+  \thispagestyle{empty}%
+  \global\@topnum\z@
+  \@afterindentfalse
+  \secdef\@chapter\@schapter}
+% Paragraphes en retrait (digressions)
+\newenvironment{digression}[0]{
+	\list{}{\listparindent 1.5em%
+                        \small
+                        \itemindent    \listparindent%
+                        \rightmargin   \leftmargin%
+                        \labelsep 0.2em%
+                        \parsep        \z@ \@plus\p@}%
+              \item\relax%
+	}%
+	{
+	\endlist%
+	}
+\makeatother
+
+\raggedbottom% for not too separated items
+
+% Layout
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{30pt}% for fancyhdr
+\setlength{\parskip}{0.2\baselineskip}%
+\pagestyle{fancy}
+% Section pas en majuscules dans le header
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}% ne marche pas
+% Abbréviation pour le header
+\makeatletter
+\renewcommand{\@chapapp}{Chapitre}% met en abbréviation partout
+\makeatother
+
+\usepackage{titling}% for author in footer
+
+\usepackage{emptypage}% for blank pages when clearing
+
+\usepackage[a4paper]{geometry}% AFTER HYPERREF or wrong pdf size
+\usepackage{eso-pic}% utile ?
+
+\usepackage{layout}% for visualizing the layout
+
+% Tables, figures and the like
+
+\usepackage{multirow}% row fusion
+\usepackage{array}% for accessing columns
+\usepackage{longtable}% for table on many pages
+
+%\usepackage[hyphens]{url}
+%\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+% Special parts
+
+\usepackage[toc,page]{appendix}
+\usepackage{listings}
+
+\usepackage[francais]{minitoc}% AFTER CAPTION AND HYPERREF
+\setcounter{parttocdepth}{1}
+\setcounter{minitocdepth}{2}
+\setcounter{secnumdepth}{5}
+
+% Sommaire de partie
+\usepackage{shorttoc}
+\renewcommand{\ptctitle}{Sommaire}% utile ?
+
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+\usepackage{polyglossia}
+
+%%%\usepackage[backend=biber, natbib, maxbibnames=20, citestyle=authoryear]{biblatex}
+%%%\usepackage{biblatex}
+%%%\addbibresource{memoire.bib} 
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+
+
+\setmainlanguage{french}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script = Arabic]{Nazli}
+\newfontfamily\ipa[Script = Latin]{CharisSIL}
+
+\usepackage{setspace}% line spacing
+\PolyglossiaSetup{french}{indentfirst=false}
+\usepackage[french=guillemets]{csquotes}
+\usepackage{lmodern}
+
+% correction du bug introduit dans la version 2016 de Texlive pour les espaces
+\makeatletter
+\appto\french@punctuation{%
+      \XeTeXinterchartoks \french@punctguillstart 255 = {\nobreakspace\xpg@nospace}% "Â«  " -> "Â«~"
+      \XeTeXinterchartoks 255 \french@punctguillend = {\xpg@unskip\nobreakspace}% "  Â»" -> "~Â»"  
+      \XeTeXinterchartoks \french@punctguillstart 4095 = {\nobreakspace\xpg@nospace}% "Â«  " -> "Â«~"
+      \XeTeXinterchartoks 4095 \french@punctguillend = {\xpg@unskip\nobreakspace}% "  Â»" -> "~Â»"
+      \XeTeXinterchartoks 4095 \french@punctthin = {\xpg@unskip\nobreak\thinspace}%
+      \XeTeXinterchartoks 4095 \french@punctthick = {\xpg@unskip\nobreakspace}%  
+}
+\makeatother
+
+\let\txar\textarabic% my macro
+\usepackage{placeins}% for blocking figures
+
+%\usepackage{chapterbib}
+%	\renewcommand{\bibsection}{\section{Bibliographie}}
+
+%\addto\captionsfrench{\def\tablename{{\textsc{Tableau}}}}
+% Layout
+
+%\usepackage{graphicx}% appelé par ?
+
+\usepackage{import}% for includefrom
+
+%\usepackage{booktabs}
+
+\usepackage{pdflscape}
+\usepackage[shortlabels]{enumitem}
+

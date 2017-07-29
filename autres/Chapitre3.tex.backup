@@ -1,0 +1,35 @@
+\chapter{État de l'art des techniques}
+\chaptermark{Techniques}
+\minitoc
+\newpage
+ 
+\section{Introduction}
+
+Il existe Plusieurs indices pour mesurer la qualité d'une classification
+non supervisée. Ils sont principalement de deux sortes; les indices
+externes et les indices internes. L'utilisation des indices externes,
+requière le recours à des information à priori sur les classes. Tandis
+que les critères internes, reposent sur la cohérence de la répartition
+des données dans la classification (similarité, dé-similarité, inertie
+des classes et cohésion topographique).
+
+Dans cette partie, nous allons passer en revue les principaux indices de
+qualité. Nous verrons en premier lieu, les indices externes et dans un
+second les internes. Pour les premiers, nous allons nous intéresser au
+taux global d'erreur de classification (Overall Error Rate of
+Classification OERC) sans coût et avec coût, sections 3.1.1 et 3.1.2. En
+section 3.1.3 nous aborderons les courbes ROC (Receiver Operating
+Characteristics) et à l'Aire sous courbes ROC (Area Under the Curve AUC)
+en section 3.1.4. Et enfin nous traiterons les mesures de Rappel,
+Précision et F-mesure (Precision, Recall and F-measure), respectivement
+en section 3.1.5, 3.1.6 et 3.1.7. En second lieu, nous nous
+intéresserons au mesure internes. indice de Dunn (1974) section 3.2.1
+indice BH de Baker et Hubert (1975) section 3.2.2 indice DB de Davies et
+Bouldin (1979) section 3.2.3 indice CH de Calinsky et Harabsz (1974)
+section 3.2.4 indice Silhouette (S) de Rousseeuw (1987) section 3.2.5
+indice HL de Hubert et Levin (1976) section 3.2.6 indice KL de
+Krzanowski et Lai (1988) section 3.2.7
+
+\input{etatart}
+
+\section{Conclusion}

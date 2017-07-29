@@ -1,0 +1,29 @@
+\select@language {french}
+\contentsline {starchapter}{Introduction}{5}
+\contentsline {part}{\hspace {1em}Problématique}{7}
+\contentsline {xpart}{Problématique}{9}
+\contentsline {chapter}{\numberline {1}Le contexte de résolution du problème}{11}
+\contentsline {section}{\numberline {1.1}Introduction}{12}
+\contentsline {section}{\numberline {1.2}Conclusion }{12}
+\contentsline {chapter}{\numberline {2}Le problème à résoudre}{13}
+\contentsline {section}{\numberline {2.1}Introduction}{14}
+\contentsline {section}{\numberline {2.2}Conclusion }{14}
+\contentsline {part}{\hspace {1em}État de l'art}{15}
+\contentsline {xpart}{État de l'art}{17}
+\contentsline {chapter}{\numberline {3}État de l'art des techniques}{19}
+\contentsline {section}{\numberline {3.1}Introduction}{20}
+\contentsline {section}{\numberline {3.2}Indices externes}{20}
+\contentsline {subsection}{\numberline {3.2.1}Taux global d'erreur de classification (\(T_{gec}\)) -sans coût-}{20}
+\contentsline {section}{\numberline {3.3}Conclusion}{20}
+\contentsline {chapter}{\numberline {4}État de l'art des données}{21}
+\contentsline {section}{\numberline {4.1}Introduction}{22}
+\contentsline {section}{\numberline {4.2}Conclusion}{22}
+\contentsline {part}{\hspace {1em}Système réalisé}{23}
+\contentsline {xpart}{Système réalisé}{25}
+\contentsline {chapter}{\numberline {5}Implémentation du système}{27}
+\contentsline {section}{\numberline {5.1}Introduction}{28}
+\contentsline {section}{\numberline {5.2}Conclusion}{28}
+\contentsline {chapter}{\numberline {6}Expérimentations et résultats}{29}
+\contentsline {section}{\numberline {6.1}Introduction}{30}
+\contentsline {section}{\numberline {6.2}Conclusion}{30}
+\contentsline {starchapter}{Conclusion}{31}

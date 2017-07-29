@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt,twoside]{book}
+\input{Preambule}
+\input{PreambuleGarde}
+
+% Infos de la page de garde
+\author{Salahh \scshape{Bakir}}
+\title{Evaluation des classifications non supervisées}
+\mention{Informatique\\
+Parcours MIASHS Big data et fouille de données}
+\directeur{Jean-Jacques \scshape{MARIAGE}}
+\societe{\scshape{Laboratoire d'Informatique Avancée de Saint Denis}\\
+Université Paris 8\\}
+\date{16 septembre 2017}
+\ecole{Université Paris 8 Vincennes à Saint-Denis}
+%%%\directeur{Gilles \scshape BERNARD}
+%%%\encadrant{Jean-Jacques \scshape{MARIAGE}}
+
+
+\begin{document}
+
+% En-têtes et pieds-de-page
+\fancyhead{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[RE]{\textit{\leftmark}}
+\fancyhead[LO]{\textit{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancyfoot{}
+\fancyfoot[LE]{\theauthor}
+\fancyfoot[RO]{2016}
+\fancyfoot[LO]{\scshape \thetitle}
+\fancyfoot[RE]{Université Paris 8 Vincennes}
+
+% Calculer les sommaires
+\dominitoc
+\doparttoc
+
+\pagedegarde
+\includefrom{}{Remerciements}
+\shorttableofcontents{Sommaire}{3}
+\includefrom{Resume/}{Resume}
+\includefrom{Abstract/}{Abstract}
+
+\includefrom{Introduction/}{Introduction}
+
+\part{Problématique}
+\parttoc
+\includefrom{Chapitre1/}{Chapitre1}
+\includefrom{Chapitre2/}{Chapitre2}
+
+\part{État de l'art}
+\parttoc
+\includefrom{Chapitre3/}{Chapitre3}
+\includefrom{Chapitre4/}{Chapitre4}
+
+\part{Système réalisé}
+\parttoc
+\newpage
+\includefrom{Chapitre5/}{Chapitre5}
+\includefrom{Chapitre6/}{Chapitre6}
+
+\includefrom{Conclusion/}{Conclusion}
+%%%\printbibliography
+\bibliographystyle{plain}
+\bibliography{memoire}
+\listoffigures
+\listoftables
+\tableofcontents
+
+\includefrom{Annexes/}{Annexes}
+\end{document}
